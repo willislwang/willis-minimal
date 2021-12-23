@@ -1,0 +1,106 @@
+<html>
+
+    <head>
+        <link id="sakura-css" rel="stylesheet" href="css/sakura.css" async>
+        <link rel="stylesheet" href="css/style.css" async>
+    </head>
+
+        <header>
+        <img id="self_img" src="static/images/bridge_portrait.jpg">
+        <h1>Willis Wang</h1>
+        <p>
+            My <a href="https://williswang.dev/resume/">CV</a>, 
+            <a href="https://github.com/willislwang">Github</a>, 
+            and <a href="https://www.linkedin.com/in/willislwang/">Linkedin</a>.
+        </p>
+        </header>
+        
+        <body>
+            <p>
+                I am an undergraduate Computer Science student at UC Berkeley.
+            </p>
+            <p>
+                My interests lie in computer systems, specifically within distrubuted systems, operating systems, and databases.
+                I use insights from different domains to improve the scalability and performance of various systems.
+            </p>
+            <p>
+            I am currently part of the <a href="https://rise.cs.berkeley.edu/">RISE Lab</a> and <a href="https://gdp.cs.berkeley.edu/redmine/projects/gdp/">Fog Robotics</a> team.  
+            </p>
+
+            <hr>
+
+            <h4>Teaching</h4>
+            <ul>
+                <li>Spring 2022: <b>UGSI</b> for CS 162: Operating Systems and Systems Programming</li>
+                <li>Fall 2021: <b>Reader</b> for <a href="https://inst.eecs.berkeley.edu/~cs162/sp21/">CS 162: Operating Systems and Systems Programming</a></li>
+                <li>Spring 2021: <b>Reader</b> for <a href="https://inst.eecs.berkeley.edu/~cs162/fa20/">CS 162: Operating Systems and Systems Programming</a></li>
+                <li>Spring 2020: <b>Reader</b> for <a href="https://bcourses.berkeley.edu/courses/1478831/">CS 182: Designing, Visualizing and Understanding Deep Neural Networks</a></li>
+            </ul>
+            
+            <hr>
+            
+            <h4>Projects</h4>
+            <div class="project_wrapper">
+                <ul>
+                    <li>
+                        <img id="project_img" src="static/images/dataspread_architecture.png">
+                        <div class="details">
+                            <p><b>Dataspread</b> a database system emphasizing user interactivity and user-friendly data view
+                                using a spreadsheet view. I am currently developing a formula computation scheduler using spreadsheet traits to improve 
+                                interactivity and performance.
+                            </p>
+                            <p><a href="https://github.com/dataspread/dataspread-web">Github</a> | <a href="http://dataspread.github.io/">Website</a></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img id="project_img" src="static/images/psl_multicast.png">
+                        <div class="details">
+                            <p><b>Paranoid Stateful Lambda</b> system provides a key-value store implemented on top of the GDP, allowing for
+                                multiple simultaneous writes with an eventually consistent semantics. We designed a new multicast message-passing protocol
+                                to improve scalability of all-to-all communication involved in the PSL key-value store.                            </p>
+                            <p><a href="https://github.com/KeplerC/paranoid-sgx/tree/cs262a-multicast_tree">Github</a> | <a href="https://github.com/KeplerC/paranoid-sgx/tree/cs262a-multicast_tree">Paper</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <footer>
+                <a class="no-border" href="#" id="switch-theme" title="Change theme" onmousedown="switchSakuraTheme()">
+                    <svg style="width: 21px; height: 21px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5
+                        3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13
+                        3z"></path>
+                    </svg></a>
+
+            </footer>
+
+        <!-- RELATIVELY LIGHT I PROMISE -->
+        <script>
+            var themes = [
+              {
+                name: "Sakura (default)",
+                href: "css/sakura.css",
+              },
+              {
+                name: "sakura-vader",
+                href: "css/sakura-vader.css",
+              },
+              {
+                name: "sakura-dark",
+                href: "css/sakura-dark.css",
+              },
+            ];
+            var current = 0;
+            var sakura = document.getElementById("sakura-css");
+        
+            function switchSakuraTheme() {
+              current += 1;
+              sakura.href = themes[(current) % themes.length].href;
+              localStorage.setItem('current-sakura-theme', current)
+            }
+        </script>
+        </body>
+        
+
+</html>

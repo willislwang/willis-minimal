@@ -1,0 +1,33 @@
+/* Custom */
+#self_img {
+    width: 210px;
+  }
+  
+  #project_img {
+    margin-right: 20px;
+    width: 250px;
+    height: 185px;
+    float: left;
+  }
+  
+  .project_wrapper ul {
+    padding: 0;
+  }
+  
+  .project_wrapper ul li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: table;
+    width: 100%;
+  }
+  
+  .project_wrapper .details {
+    float: left;
+    width: 60%;
+    vertical-align: middle;
+  }
+
+  footer {
+      text-align: center;
+  }
+      
