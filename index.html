@@ -8,7 +8,7 @@
     </head>
 
         <header>
-        <img id="self_img" src="static/images/forest_portrait.PNG">
+        <img id="self_img" src="static/images/sd_portrait.jpg">
         <h1>Willis Wang</h1>
         <p>
             My <a href="https://willislwang.github.io/cv/">CV</a>, 
@@ -19,7 +19,10 @@
         
         <body>
             <p>
-                I am an undergraduate Computer Science student at UC Berkeley.
+                I am an production engineer at Meta.
+            </p>
+            <p>
+                I recently graduated from UC Berkeley in 2022 with a B.A. in Computer Science! 🎉
             </p>
             <p>
                 My interests lie in computer systems, specifically within distrubuted systems, operating systems, and databases.
@@ -27,7 +30,7 @@
                 for new opportunities to gain hands-on experience and technical knowledge.
             </p>
             <p>
-            I am currently part of the <a href="https://rise.cs.berkeley.edu/">RISE Lab</a> and <a href="https://gdp.cs.berkeley.edu/redmine/projects/gdp/">Fog Robotics</a> team.  
+            I am currently part of the <a href="https://gdp.cs.berkeley.edu/redmine/projects/gdp/">Fog Robotics</a> team on some cool flat routing protocols 🌎.  
             </p>
 
             <hr>
@@ -43,17 +46,17 @@
             
             <hr>
             
+            <!-- TODO: Add subsections (too many PSL projects!) -->
             <h4>Projects</h4>
             <div class="project_wrapper">
                 <ul>
                     <li>
-                        <img id="project_img" src="static/images/dataspread_architecture.png">
+                        <img id="project_img" src="static/images/psl_locking_steps.png">
                         <div class="details">
-                            <p><b>Dataspread</b> a database system emphasizing user interactivity and user-friendly data view
-                                using a spreadsheet view. I am currently developing a <b>formula computation scheduler</b> using spreadsheet traits to improve 
-                                interactivity and performance.
-                            </p>
-                            <p><a href="https://github.com/dataspread/dataspread-web">Github</a> | <a href="http://dataspread.github.io/">Website</a></p>
+                            <p><b>Release Consistent Locking for PSL</b> provides a stronger guarantee than eventual consistency model, removing the possibility of nodes using old values for computation.
+                                We implemented and benchmarked our implementation of <b>release consistent locking on the PSL distributed key-value store</b> allowing for distributed data-centric applications requiring stronger data consistensy.
+                                
+                            <p><a href="https://github.com/KeplerC/paranoid-sgx/tree/cs267-dist_locking">Github</a> | <a href="https://github.com/willislwang/willis-minimal/raw/main/static/papers/psl_locking.pdf">Paper</a></p>
                         </div>
                     </li>
 
@@ -64,6 +67,17 @@
                                 multiple simultaneous writes with an eventually consistent semantics. We designed a new <b>multicast message-passing protocol
                                 </b>to improve scalability of all-to-all communication involved in the PSL key-value store.                            </p>
                             <p><a href="https://github.com/KeplerC/paranoid-sgx/tree/cs262a-multicast_tree">Github</a> | <a href="https://github.com/willislwang/willis-minimal/raw/main/static/papers/psl_multicast.pdf">Paper</a></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img id="project_img" src="static/images/dataspread_architecture.png">
+                        <div class="details">
+                            <p><b>Dataspread</b> a database system emphasizing user interactivity and user-friendly data view
+                                using a spreadsheet view. I am currently developing a <b>formula computation scheduler</b> using spreadsheet traits to improve 
+                                interactivity and performance.
+                            </p>
+                            <p><a href="https://github.com/dataspread/dataspread-web">Github</a> | <a href="http://dataspread.github.io/">Website</a></p>
                         </div>
                     </li>
 
