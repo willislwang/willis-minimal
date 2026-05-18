@@ -1,36 +1,42 @@
 <html>
 
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" sizes="32x32" href="static/images/logo.png">
         <link id="sakura-css" rel="stylesheet" href="css/sakura.css" async>
         <link rel="stylesheet" href="css/style.css" async>
         <title>Willis Wang</title>
     </head>
 
+    <body>
         <header>
-        <img id="self_img" src="static/images/sd_portrait.jpg">
-        <h1>Willis Wang</h1>
-        <p>
-            My <a href="https://willislwang.github.io/cv/">CV</a>, 
-            <a href="https://github.com/willislwang">Github</a>, 
-            and <a href="https://www.linkedin.com/in/willislwang/">Linkedin</a>.
-        </p>
+            <img id="self_img" src="static/images/sd_portrait.jpg">
+            <h1>Willis Wang</h1>
+            <p>
+                My <a href="https://willislwang.github.io/cv/">CV</a>,
+                <a href="https://github.com/willislwang">Github</a>,
+                and <a href="https://www.linkedin.com/in/willislwang/">Linkedin</a>.
+            </p>
         </header>
-        
-        <body>
+
+        <main>
             <p>
-                I am an production engineer at Meta.
+                I am a production engineer at Meta.
             </p>
             <p>
-                I recently graduated from UC Berkeley in 2022 with a B.A. in Computer Science! 🎉
+                I graduated from UC Berkeley in 2022 with a B.A. in Computer Science.
             </p>
             <p>
-                My interests lie in computer systems, specifically within distrubuted systems, operating systems, and databases.
-                I use insights from different domains to improve the scalability and performance of various systems. I am always looking
-                for new opportunities to gain hands-on experience and technical knowledge.
+                I currently work on Meta's internal time-series database, serving high-availability metrics at Meta-sized request scale.
+                Before that, I worked on Meta's blob storage system — the backbone behind every message, video, cat picture, etc. on exabyte scale.
             </p>
             <p>
-            I am currently part of the <a href="https://gdp.cs.berkeley.edu/redmine/projects/gdp/">Fog Robotics</a> team on some cool flat routing protocols 🌎.  
+                My interests primarily lie in computer systems — from distributed systems and operating systems to the nitty gritty of architecture.
+                Always seeking novel opportunities and getting my hands dirty to learn the ins and outs of bare-metal computers.
+            </p>
+            <p>
+                I was part of the <a href="https://gdp.cs.berkeley.edu/redmine/projects/gdp/">Fog Robotics</a> team working on flat routing protocols 🌎.
             </p>
 
             <hr>
@@ -43,25 +49,25 @@
                 <li>Spring 2021: <b>Reader</b> for <a href="https://inst.eecs.berkeley.edu/~cs162/sp21/">CS 162: Operating Systems and Systems Programming</a></li>
                 <li>Spring 2020: <b>Reader</b> for <a href="https://bcourses.berkeley.edu/courses/1478831/">CS 182: Designing, Visualizing and Understanding Deep Neural Networks</a></li>
             </ul>
-            
+
             <hr>
-            
+
             <!-- TODO: Add subsections (too many PSL projects!) -->
             <h4>Projects</h4>
             <div class="project_wrapper">
                 <ul>
                     <li>
-                        <img id="project_img" src="static/images/psl_locking_steps.png">
+                        <img class="project_img" src="static/images/psl_locking_steps.png">
                         <div class="details">
                             <p><b>Release Consistent Locking for PSL</b> provides a stronger guarantee than eventual consistency model, removing the possibility of nodes using old values for computation.
-                                We implemented and benchmarked our implementation of <b>release consistent locking on the PSL distributed key-value store</b> allowing for distributed data-centric applications requiring stronger data consistensy.
-                                
+                                We implemented and benchmarked our implementation of <b>release consistent locking on the PSL distributed key-value store</b> allowing for distributed data-centric applications requiring stronger data consistency.
+
                             <p><a href="https://github.com/KeplerC/paranoid-sgx/tree/cs267-dist_locking">Github</a> | <a href="https://github.com/willislwang/willis-minimal/raw/main/static/papers/psl_locking.pdf">Paper</a></p>
                         </div>
                     </li>
 
                     <li>
-                        <img id="project_img" src="static/images/psl_multicast.png">
+                        <img class="project_img" src="static/images/psl_multicast.png">
                         <div class="details">
                             <p><b>Paranoid Stateful Lambda</b> system provides a key-value store implemented on top of the GDP, allowing for
                                 multiple simultaneous writes with an eventually consistent semantics. We designed a new <b>multicast message-passing protocol
@@ -71,10 +77,10 @@
                     </li>
 
                     <li>
-                        <img id="project_img" src="static/images/dataspread_architecture.png">
+                        <img class="project_img" src="static/images/dataspread_architecture.png">
                         <div class="details">
                             <p><b>Dataspread</b> a database system emphasizing user interactivity and user-friendly data view
-                                using a spreadsheet view. I am currently developing a <b>formula computation scheduler</b> using spreadsheet traits to improve 
+                                using a spreadsheet view. I am currently developing a <b>formula computation scheduler</b> using spreadsheet traits to improve
                                 interactivity and performance.
                             </p>
                             <p><a href="https://github.com/dataspread/dataspread-web">Github</a> | <a href="http://dataspread.github.io/">Website</a></p>
@@ -82,7 +88,7 @@
                     </li>
 
                     <li>
-                        <img id="project_img" src="static/images/delta_lake.jpeg">
+                        <img class="project_img" src="static/images/delta_lake.jpeg">
                         <div class="details">
                             <p><b>Delta Lake</b> is a high performance open
                                 source ACID table storage layer over cloud object stores. I built a <b>RocksDB-backed caching layer</b> on top of Delta Lake
@@ -102,6 +108,7 @@
                     </svg></a>
 
             </footer>
+        </main>
 
         <!-- RELATIVELY LIGHT I PROMISE -->
         <script>
@@ -121,14 +128,14 @@
             ];
             var current = 0;
             var sakura = document.getElementById("sakura-css");
-        
+
             function switchSakuraTheme() {
               current += 1;
               sakura.href = themes[(current) % themes.length].href;
               localStorage.setItem('current-sakura-theme', current)
             }
         </script>
-        </body>
-        
+    </body>
+
 
 </html>
