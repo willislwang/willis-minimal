@@ -1,8 +1,8 @@
 # willis-minimal
 
-My lightweight and minimal website, with some light js (if you can find it).
+My lightweight and minimal website, with some very light js.
 
-After playing around with some website building frameworks and realizing how clunky most of them are, I decided to go back to the roots of using HTML, CSS, and inline JS.
+After playing around with various website building frameworks and realizing how clunky most of them are, I decided to do things the old way, and make a static, single-file* website, with a theme toggle at the bottom.
 
 Using the [Sakura](https://github.com/oxalorg/sakura) CSS stylesheet with little modifications.
 
