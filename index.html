@@ -130,21 +130,26 @@
         <!-- RELATIVELY LIGHT I PROMISE -->
         <script>
             var themes = [
-              { name: "Sakura (default)", href: "css/sakura.css" },
-              { name: "sakura-vader",     href: "css/sakura-vader.css" },
-              { name: "sakura-dark",      href: "css/sakura-dark.css" },
+              { name: "Sakura (default)", href: "css/sakura.css",       selectionColor: "#FFF7B1" },
+              { name: "sakura-vader",     href: "css/sakura-vader.css", selectionColor: "#4a3800" },
+              { name: "sakura-dark",      href: "css/sakura-dark.css",  selectionColor: "#4a3800" },
             ];
             var current = parseInt(localStorage.getItem('current-sakura-theme') || '0');
             var sakura = document.getElementById("sakura-css");
-            sakura.href = themes[current % themes.length].href;
+
+            function applyTheme(index) {
+              var theme = themes[index % themes.length];
+              sakura.href = theme.href;
+              document.documentElement.style.setProperty('--selection-color', theme.selectionColor);
+            }
+
+            applyTheme(current);
 
             console.log('%cYes, I know the source is minimal. That\'s the point.', 'font-style: italic; color: #1d7484;');
 
-            console.log('%cYes, I know the source is minimal. That's the point.', 'font-style: italic; color: #1d7484;');
-
             function switchSakuraTheme() {
               current += 1;
-              sakura.href = themes[current % themes.length].href;
+              applyTheme(current);
               localStorage.setItem('current-sakura-theme', current);
             }
         </script>

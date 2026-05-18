@@ -1,6 +1,6 @@
 /* Custom */
 ::selection {
-    background: #FFF7B1;
+    background: var(--selection-color, #FFF7B1);
 }
 
 #self_img {
