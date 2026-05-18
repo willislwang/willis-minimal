@@ -22,7 +22,7 @@
 
         <main>
             <p>
-                I am a production engineer at Meta.
+                I am a software engineer at Meta.
             </p>
             <p>
                 I graduated from UC Berkeley in 2022 with a B.A. in Computer Science.
@@ -41,7 +41,7 @@
 
             <hr>
 
-            <h4>Teaching</h4>
+            <h3>Teaching</h3>
             <ul>
                 <li>Spring 2022: <b>UGSI</b> for <a href="https://cs162.org/">CS 162: Operating Systems and Systems Programming</a></li>
                 <!-- Replace FA21 link with archived link when available -->
@@ -53,7 +53,7 @@
             <hr>
 
             <!-- TODO: Add subsections (too many PSL projects!) -->
-            <h4>Projects</h4>
+            <h3>Projects</h3>
             <div class="project_wrapper">
                 <ul>
                     <li>
@@ -126,12 +126,13 @@
                 href: "css/sakura-dark.css",
               },
             ];
-            var current = 0;
+            var current = parseInt(localStorage.getItem('current-sakura-theme') || '0');
             var sakura = document.getElementById("sakura-css");
+            sakura.href = themes[current % themes.length].href;
 
             function switchSakuraTheme() {
               current += 1;
-              sakura.href = themes[(current) % themes.length].href;
+              sakura.href = themes[current % themes.length].href;
               localStorage.setItem('current-sakura-theme', current)
             }
         </script>
