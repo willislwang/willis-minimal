@@ -3,10 +3,27 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Willis Wang">
+        <meta name="description" content="Willis Wang is a software engineer at Meta working on large-scale distributed systems, including a time-series database and blob storage.">
         <link rel="icon" type="image/png" sizes="32x32" href="static/images/logo.png">
         <link id="sakura-css" rel="stylesheet" href="css/sakura.css" async>
         <link rel="stylesheet" href="css/style.css" async>
         <title>Willis Wang</title>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Willis Wang",
+            "jobTitle": "Software Engineer",
+            "worksFor": { "@type": "Organization", "name": "Meta" },
+            "alumniOf": { "@type": "CollegeOrUniversity", "name": "UC Berkeley" },
+            "url": "https://willislwang.github.io",
+            "sameAs": [
+                "https://github.com/willislwang",
+                "https://www.linkedin.com/in/willislwang/"
+            ]
+        }
+        </script>
     </head>
 
     <body>
@@ -120,6 +137,10 @@
             var current = parseInt(localStorage.getItem('current-sakura-theme') || '0');
             var sakura = document.getElementById("sakura-css");
             sakura.href = themes[current % themes.length].href;
+
+            console.log('%cYes, I know the source is minimal. That\'s the point.', 'font-style: italic; color: #1d7484;');
+
+            console.log('%cYes, I know the source is minimal. That's the point.', 'font-style: italic; color: #1d7484;');
 
             function switchSakuraTheme() {
               current += 1;
