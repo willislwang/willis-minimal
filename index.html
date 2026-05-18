@@ -113,18 +113,9 @@
         <!-- RELATIVELY LIGHT I PROMISE -->
         <script>
             var themes = [
-              {
-                name: "Sakura (default)",
-                href: "css/sakura.css",
-              },
-              {
-                name: "sakura-vader",
-                href: "css/sakura-vader.css",
-              },
-              {
-                name: "sakura-dark",
-                href: "css/sakura-dark.css",
-              },
+              { name: "Sakura (default)", href: "css/sakura.css" },
+              { name: "sakura-vader",     href: "css/sakura-vader.css" },
+              { name: "sakura-dark",      href: "css/sakura-dark.css" },
             ];
             var current = parseInt(localStorage.getItem('current-sakura-theme') || '0');
             var sakura = document.getElementById("sakura-css");
@@ -133,7 +124,7 @@
             function switchSakuraTheme() {
               current += 1;
               sakura.href = themes[current % themes.length].href;
-              localStorage.setItem('current-sakura-theme', current)
+              localStorage.setItem('current-sakura-theme', current);
             }
         </script>
     </body>
